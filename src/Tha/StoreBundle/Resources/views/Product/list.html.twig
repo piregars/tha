@@ -1,0 +1,61 @@
+{% extends 'ThaCoreBundle::layout.html.twig' %}
+
+{% block content %}
+<h2><span>Products</span></h2>
+<p>Pellentesque ut massa vitae tortor consequat adipiscing. Nunc consequat rutrum urna eu rhoncus. Aliquam erat volutpat. Aenean id nisl vel nisl sodales pharetra. Nam bibendum ipsum sed risus condimentum congue. In erat lacus, vestibulum quis pulvinar a, placerat sed tortor. Proin pellentesque nibh nulla. Donec elit nunc, iaculis ac interdum sed, lacinia quis tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed malesuada enim ut lectus sagittis facilisis.</p>
+<hr>
+<div class="row" style="margin-bottom: 20px;">
+    <div class="col-md-6">
+        {{ products|length }} product(s) found.
+    </div>
+    <div class="col-md-6">
+        <ul class="pagination pull-right">
+            <li><a href="#">&laquo;</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">&raquo;</a></li>
+        </ul>
+    </div>
+</div>
+{% for product in products %}
+    {% if loop.index == 1 or loop.index % 3 == 1 %}<div class="row">{% endif %}
+    <div class="col-md-4">
+        <a class="coolboxbro" href="{{ path('msi_store_product_show', {'id': product.id}) }}" style="margin-bottom: 20px;">
+            <div class="coolboxbro-header">
+                <img src="http://placehold.it/500x400" alt="0">
+            </div>
+            <div class="coolboxbro-body">
+                <p>
+                    <strong>{{ product|truncate(15) }}</strong>
+                    <br>
+                    {% if product.discount %}
+                        From: <span style="text-decoration: line-through;">${{ product.price|number_format(2) }}</span> <span class="text-danger">${{ product.discount|number_format(2) }}</span>
+                    {% else %}
+                        From: ${{ product.price|number_format(2) }}
+                    {% endif %}
+                </p>
+            </div>
+        </a>
+    </div>
+    {% if loop.index == products|length or loop.index % 3 == 0 %}</div>{% endif %}
+{% endfor %}
+<div class="row" style="margin-bottom: 20px;">
+    <div class="col-md-6">
+        {{ products|length }} product(s) found.
+    </div>
+    <div class="col-md-6">
+        <ul class="pagination pull-right">
+            <li><a href="#">&laquo;</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">&raquo;</a></li>
+        </ul>
+    </div>
+</div>
+{% endblock %}

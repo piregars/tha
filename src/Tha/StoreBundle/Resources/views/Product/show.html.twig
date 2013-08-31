@@ -1,0 +1,78 @@
+{% extends 'ThaCoreBundle::layout.html.twig' %}
+
+{% block content %}
+<h3><span>{{ product }}</span></h3>
+<div class="row" style="margin-bottom: 20px;">
+    <div class="col-md-6">
+        <a rel=gal1 class="fancybox" href="/uploads/images/test.jpg"><img src="http://placehold.it/334x310" alt="0"></a>
+    </div>
+    <div class="col-md-6">
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="col-md-4">
+                <a rel=gal1 class="fancybox" href="/uploads/images/test.jpg"><img src="http://placehold.it/91x90" alt="0"></a>
+            </div>
+            <div class="col-md-4">
+                <a rel=gal1 class="fancybox" href="/uploads/images/test.jpg"><img src="http://placehold.it/91x90" alt="0"></a>
+            </div>
+            <div class="col-md-4">
+                <a rel=gal1 class="fancybox" href="/uploads/images/test.jpg"><img src="http://placehold.it/91x90" alt="0"></a>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="col-md-4">
+                <a rel=gal1 class="fancybox" href="/uploads/images/test.jpg"><img src="http://placehold.it/91x90" alt="0"></a>
+            </div>
+            <div class="col-md-4">
+                <a rel=gal1 class="fancybox" href="/uploads/images/test.jpg"><img src="http://placehold.it/91x90" alt="0"></a>
+            </div>
+            <div class="col-md-4">
+                <a rel=gal1 class="fancybox" href="/uploads/images/test.jpg"><img src="http://placehold.it/91x90" alt="0"></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <a rel=gal1 class="fancybox" href="/uploads/images/test.jpg"><img src="http://placehold.it/91x90" alt="0"></a>
+            </div>
+            <div class="col-md-4">
+                <a rel=gal1 class="fancybox" href="/uploads/images/test.jpg"><img src="http://placehold.it/91x90" alt="0"></a>
+            </div>
+            <div class="col-md-4">
+                <a rel=gal1 class="fancybox" href="/uploads/images/test.jpg"><img src="http://placehold.it/91x90" alt="0"></a>
+            </div>
+        </div>
+    </div>
+</div>
+<p>Pellentesque ut massa vitae tortor consequat adipiscing. Nunc consequat rutrum urna eu rhoncus. Aliquam erat volutpat. Aenean id nisl vel nisl sodales pharetra. Nam bibendum ipsum sed risus condimentum congue. In erat lacus, vestibulum quis pulvinar a, placerat sed tortor. Proin pellentesque nibh nulla. Donec elit nunc, iaculis ac interdum sed, lacinia quis tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed malesuada enim ut lectus sagittis facilisis.</p>
+<p>Pellentesque ut massa vitae tortor consequat adipiscing. Nunc consequat rutrum urna eu rhoncus. Aliquam erat volutpat. Aenean id nisl vel nisl sodales pharetra. Nam bibendum ipsum sed risus condimentum congue. In erat lacus, vestibulum quis pulvinar a, placerat sed tortor. Proin pellentesque nibh nulla. Donec elit nunc, iaculis ac interdum sed, lacinia quis tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed malesuada enim ut lectus sagittis facilisis.</p>
+<p>Pellentesque ut massa vitae tortor consequat adipiscing. Nunc consequat rutrum urna eu rhoncus. Aliquam erat volutpat. Aenean id nisl vel nisl sodales pharetra. Nam bibendum ipsum sed risus condimentum congue. In erat lacus, vestibulum quis pulvinar a, placerat sed tortor. Proin pellentesque nibh nulla. Donec elit nunc, iaculis ac interdum sed, lacinia quis tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed malesuada enim ut lectus sagittis facilisis.</p>
+<p class="lead">From: ${{ product.price|number_format(2) }}</p>
+{% endblock %}
+
+{% block content_bottom %}
+{{ render(controller('MsiStoreBundle:Product:featured')) }}
+{% endblock %}
+
+{% block js %}
+{{ parent() }}
+{% include 'MsiStoreBundle:Product:featured_js.html.twig' %}
+<script src="{{ asset('bundles/msiadmin/vendor/fancybox/source/jquery.fancybox.js') }}"></script>
+<script>
+$(document).ready(function() {
+    $('.fancybox').fancybox({
+        speedIn: 200,
+        speedOut: 200,
+        fitToView: false,
+        helpers: {
+            overlay: {
+                fixed: false
+            }
+        }
+    });
+});
+</script>
+{% endblock %}
+
+{% block css %}
+{{ parent() }}
+<link rel="stylesheet" href="{{ asset('bundles/msiadmin/vendor/fancybox/source/jquery.fancybox.css') }}">
+{% endblock css %}

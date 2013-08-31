@@ -1,0 +1,17 @@
+{% extends 'ThaCoreBundle::layout.html.twig' %}
+
+{% block content %}
+<h2><span>Welcome to Tar Heel Ants</span></h2>
+<p>Welcome to Tar Heel Ants.  We offer the finest in formicaria and ant keeping products.  Here at Tar Heel Ants, we believe that ants make great pets. In addition, their social interaction is some of the most complex found in the animal kingdom, and as such we strive to provide quality habitats to observe and study their behaviors.  We welcome feedback about the site so we can better help you enjoy your experience with the worlds most fascinating creatures!</p>
+<p>To get started learning about Tar Heel Ants and who we are, we recommend you read this information first and then read our About Us page for more on our background as a company and how Tar Heel Ants got started. Enjoy your visit and come back often, as we make frequent updates with new products and other content.</p>
+<hr>
+{% endblock %}
+
+{% block content_bottom %}
+{{ render(controller('MsiStoreBundle:Product:featured')) }}
+{% endblock %}
+
+{% block js %}
+{{ parent() }}
+{% include 'MsiStoreBundle:Product:featured_js.html.twig' %}
+{% endblock %}

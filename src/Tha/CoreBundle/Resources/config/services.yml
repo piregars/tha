@@ -1,0 +1,7 @@
+parameters:
+#    tha_core.example.class: Tha\CoreBundle\Example
+
+services:
+#    tha_core.example:
+#        class: %tha_core.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

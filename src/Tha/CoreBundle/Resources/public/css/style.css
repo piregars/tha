@@ -1,0 +1,211 @@
+html {
+    overflow-y: scroll;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    /*font-size: 13px;*/
+    background: #999;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 0;
+}
+
+.wrap {
+    padding: 15px;
+    background: #f5f5f5;
+}
+
+.coolboxsis {
+    background: #fff;
+    padding: 20px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+}
+
+.btn [class^="icon-"], .btn [class*=" icon-"] {
+    vertical-align: middle;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    display: inline-block !important;
+    width: 1.1428571428571428em;
+    text-align: center;
+}
+
+[class^="icon-"].icon-large,
+[class*=" icon-"].icon-large {
+    width: 1.4285714285714286em;
+}
+
+img {
+    width: auto\9;
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+}
+
+.pagination {
+    margin: 0;
+}
+
+.coolboxbro {
+    display: block;
+    padding: 5px;
+    background: #fff;
+    /*box-shadow: 1px 1px 6px #bbb;*/
+    /* margin is to show the shadow */
+    /*margin: 6px;*/
+    border-radius: 4px;
+    color: inherit;
+    border: 1px solid #ddd;
+}
+
+.coolboxbro-header {
+    margin-bottom: 5px;
+}
+
+.coolboxbro-body {
+    padding: 5px;
+}
+
+.coolboxbro:hover, .coolboxbro:focus {
+    color: inherit;
+    border: 1px solid #6f88a6;
+}
+
+.coolboxbro p:last-child {
+    margin-bottom: 0;
+}
+
+#featuredProductCarousel .carousel-wrap {
+    overflow: hidden;
+}
+
+#featuredProductCarousel .carousel {
+    list-style: none;
+    padding: 0;
+    overflow: hidden;
+    margin: 0;
+}
+
+#featuredProductCarousel .carousel li {
+    float: left;
+}
+
+#featuredProductCarousel .carousel li > .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#featuredProductCarousel .control {
+    margin-top: 67px;
+}
+
+@media (min-width: 768px) {
+    #featuredProductCarousel .carousel li {
+        width: 752px;
+    }
+}
+
+@media (min-width: 992px) {
+    #featuredProductCarousel .carousel li {
+        width: 752px;
+    }
+}
+
+h2 {
+    /*border-bottom: 1px solid red;*/
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+h2 span {
+    border-bottom: 4px solid #6f88a6;
+    padding-bottom: 4px;
+    padding-right: 20px;
+}
+
+h3 {
+    /*border-bottom: 1px solid red;*/
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+h3 span {
+    border-bottom: 4px solid #6f88a6;
+    padding-bottom: 4px;
+    padding-right: 20px;
+}
+
+h4 {
+    text-transform: uppercase;
+}
+
+#socialBar h4, #socialBar ul {
+    margin: 8px 0 0;
+}
+
+.twitter-typeahead {
+    display: block !important;
+}
+
+.twitter-typeahead .tt-hint {
+    display: none;
+}
+
+.twitter-typeahead .tt-query,
+.twitter-typeahead .tt-hint {
+    margin-bottom: 0;
+}
+
+.tt-dropdown-menu {
+    min-width: 100%;
+    margin-top: 2px;
+    padding: 5px 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.2);
+    *border-right-width: 2px;
+    *border-bottom-width: 2px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+}
+
+.tt-suggestion {
+    display: block;
+    padding: 3px 20px;
+}
+
+.tt-suggestion.tt-is-under-cursor {
+    color: #fff;
+    background-color: #6f88a6;
+}
+
+.tt-suggestion.tt-is-under-cursor a {
+    color: #fff;
+}
+
+.tt-suggestion p {
+    margin: 0;
+}
